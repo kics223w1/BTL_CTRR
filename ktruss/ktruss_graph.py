@@ -24,6 +24,10 @@ def build_k_truss(G, k):
         
         H.remove_edges_from(to_remove)
     
+    # Remove isolated nodes after building k-truss
+    isolated_nodes = list(nx.isolates(H))
+    H.remove_nodes_from(isolated_nodes)
+    
     return H
 
 # Usage
