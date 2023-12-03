@@ -35,7 +35,7 @@ G = nx.Graph()
 G.add_edges_from(data)
 
 # Set the desired k value
-k = 4
+k = 30
 
 # Build k-truss
 k_truss_graph = build_k_truss(G, k)
